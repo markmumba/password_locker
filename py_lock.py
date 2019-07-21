@@ -42,10 +42,30 @@ class profiles:
     def delete_profile(self):
 
         profiles.profiles_list.remove(self)
-        
+
     @classmethod
     def search_profile(cls, app):
-        
+
         for profile in cls.profiles_list:
-            if profile.app ==app:
+            if profile.app == app:
                 return profile
+
+    @classmethod
+    def profile_exist(cls, app):
+        for profile in cls.profiles_list:
+            if profile.app == app:
+                return True
+        return False
+
+    @classmethod
+    def display_profile(cls):
+
+        return cls.profiles_list
+
+    def gen_password():
+        chars = char = string.ascii_uppercase+string.ascii_lowercase+string.digits
+        length = 9
+        print('here is  are your password:')
+        password = ''.join(random.choice(chars) for _ in range(-1, length))
+        print(password)
+        return password
