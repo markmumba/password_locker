@@ -40,4 +40,14 @@ def delete_profile(py_lock):
     py_lock.delete_profile()
 
 
-def find_
+def find_profile(app):
+    
+    return profiles.search_profile(app)
+
+
+def check_existing_profile(app):
+    
+    return profiles.profile_exist(app)
+
+
+de
