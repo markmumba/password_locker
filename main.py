@@ -125,4 +125,21 @@ def main():
                     "Your Account(s) Credential(S) are as follows :")
                 print('\n')
                 for password_locker in display_profile():
-                    print(f"App_name :{py_lock.app_name} ; UserName: {password_locker.user_name} ; PassWord :{password_locker.password}")
+                    print(
+                        f"App_name :{password_locker.app_name} ; UserName: {password_locker.username} ; PassWord :{password_locker.password}")
+
+                print('\n')
+            else:
+                print('\n')
+                print(
+                    "Oops !!! You dont seem to have any Credentials saved yet")
+                print('\n')
+
+        elif short_code == 'fc':
+            
+            print ("Enter the Account Name you want to search for")
+            search_name = input().capitalize()
+            if check_existing_profile(search_name):
+                search_profile= find_profile(search_name)
+                print
+            
