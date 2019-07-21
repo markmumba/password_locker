@@ -76,4 +76,13 @@ class Testprofile(unittest.TestCase):
         
         self.assertEqual(profiles.display_profile(),profiles.profiles_list)
         
+    def test_copy_password(self):
+        self.new_profile.save_profile()
+        profiles.copy_password("instagram")
+        self.assertEqual(self.new_profile.password,pyperclip.paste())
+        
+        
+    def
+
+        
         
