@@ -56,7 +56,7 @@ def display_profile():
     return profiles.display_profile()
 
 
-def copy_passwords(app):
+def copy_password(app):
 
     profiles.copy_password(app)
 
@@ -136,10 +136,36 @@ def main():
                 print('\n')
 
         elif short_code == 'fc':
-            
-            print ("Enter the Account Name you want to search for")
+
+            print("Enter the Account Name you want to search for")
             search_name = input().capitalize()
             if check_existing_profile(search_name):
-                search_profile= find_profile(search_name)
-                print
-            
+                search_profile = find_profile(search_name)
+                print(f"app_name:{search_profile.app_name}")
+                print('-'*100)
+                print(
+                    f"app_name:{search_profile.app_name} password :{search_profile.password}")
+            else:
+                print("That Credential does not exist")
+                print('\n')
+
+        elif short_code == 'cp':
+            print("Enter the app name of the profile you want to generate password for")
+            search_name = input().capitalize()
+            if check_existing_profile(search_name):
+                search_profile = find_profile(search_name)
+                print(f"{search_profile.app_name}")
+                print('-'*20)
+                password = copy_password(search_name)
+                print('\n')
+                print(
+                    f"New profile : {app_name} username: {username} You can proceed and paste to your account")
+                print('\n')
+            else:
+                print("That profile does not exist")
+        elif short_code == 'gp':
+                    	password = gen_password()
+        
+        elif         
+                 
+                 
