@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.8
 import pyperclip
 import random
 import string
@@ -41,13 +42,87 @@ def delete_profile(py_lock):
 
 
 def find_profile(app):
-    
+
     return profiles.search_profile(app)
 
 
 def check_existing_profile(app):
-    
+
     return profiles.profile_exist(app)
 
 
-de
+def display_profile():
+
+    return profiles.display_profile()
+
+
+def copy_passwords(app):
+
+    profiles.copy_password(app)
+
+
+def gen_password():
+    auto_generic_password = profiles.gen_password()
+
+    return auto_generic_password
+
+
+def main():
+    print("Welome to your user profiles list.Create An Account :CA or Already have an Account LI? :")
+    short_code = input("CA ,LI").lower()
+    if short_code == 'ca':
+        username = input("Enter your prefered username").capitalize()
+        password = input("Enter Your Password As Well")
+        save_New_persona(create_persona(username, password))
+
+    elif short_code == 'li':
+        username = input("Enter your prefered username").capitalize()
+        password = input("Enter Your Password As Well")
+        validate_persona = (accept_persona(username, password))
+
+        if validate_persona == username:
+            print(f"Hello {username}.Welcome To PassWord Locker Manager")
+            print('\n')
+            print("what would you like to do?")
+            print('\n')
+
+    while True:
+        print("Use these short codes : cc - Create a new credential, dc - Display Credential(s), fc - Find a credential,ex - Exit the application, gp- Generate A randomn password, del- Delete credential,cp-Copy Password")
+        short_code = input().lower()
+
+        if short_code == 'cc':
+            print("New Profile")
+            print("-"*10)
+
+            print("App name.....")
+            app_name = input().capitalize()
+
+            print("Your App name ...e.g instagram username")
+            persona_name = input()
+            while True:
+                print(" For Type/Paste Password type TP ; For generate_Password type gp")
+                password == input("Enter").lower()
+                if password == 'tp':
+                    password = input("Enter Password")
+                    break
+                elif password == 'gp':
+                    password = gen_password()
+                    break
+                elif password != 'tp' or 'gp':
+                    print("Invalid password please try again")
+                    break
+                else:
+                    print("Invalid password please try again")
+                    save_profile(create_profile(app_name, username, password))
+                    print('\n')
+                    print(
+                        f"New Credential : {app_name} UserName: {username}  created")
+                    print('\n')
+
+        elif short_code == 'dc':
+            if display_profile():
+                print(
+                    "Your Account(s) Credential(S) are as follows :")
+                print('\n')
+                for password_locker in display_profile():
+                    print(f"App_name :{py_lock.app_name} ; UserName: {password_locker.user_name} ; PassWord :{password_locker.password}")
