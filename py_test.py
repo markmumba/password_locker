@@ -49,7 +49,15 @@ class Testprofile(unittest.TestCase):
         test_profile.delete_profile()
         self.assertEqual(len(profiles.profiles_list),1)
         
-    def test_search_profile(self)
+    def test_search_profile(self):
+        self.new_profile.save_profile()
+        test_profile = profiles(
+            "instagram","markian","Mortyka56//"
+        )
+        test_profile.save_profile()
+        
+        found_profile = profiles.search_profile("instagram")
+        
         
         
       
