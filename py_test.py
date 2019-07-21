@@ -72,17 +72,19 @@ class Testprofile(unittest.TestCase):
         self.assertTrue(profile_exists)
 
     def test_display_profile(self):
-        
-        
-        self.assertEqual(profiles.display_profile(),profiles.profiles_list)
-        
+
+        self.assertEqual(profiles.display_profile(), profiles.profiles_list)
+
     def test_copy_password(self):
         self.new_profile.save_profile()
         profiles.copy_password("instagram")
-        self.assertEqual(self.new_profile.password,pyperclip.paste())
-        
-        
-    def
+        self.assertEqual(self.new_profile.password, pyperclip.paste())
 
-        
-        
+    def test_gen_password(self):
+        self.new_profile.save_profile()
+        profiles.copy_password("instagram")
+        self.assertEqual(self.new_profile.password, pyperclip.paste())
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -42,3 +42,10 @@ class profiles:
     def delete_profile(self):
 
         profiles.profiles_list.remove(self)
+        
+    @classmethod
+    def search_profile(cls, app):
+        
+        for profile in cls.profiles_list:
+            if profile.app ==app:
+                return profile
