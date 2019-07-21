@@ -22,8 +22,22 @@ def accept_persona(persona_name, password):
 
     return accept_persona
 
-def create_profile(app, persona_name,user_password):
-    
+
+def create_profile(app, persona_name, user_password):
+
     new_profile = profiles(
-        app, persona_name,user_password
+        app, persona_name, user_password
     )
+    return new_profile
+
+
+def save_profile(py_lock):
+    py_lock.save_profile()
+
+
+def delete_profile(py_lock):
+
+    py_lock.delete_profile()
+
+
+def find_
