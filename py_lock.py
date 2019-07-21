@@ -17,12 +17,28 @@ class personas:
         personas.personas_list.append(self)
 
 
-class profile:
-    
-    profile_list =[]
-    
-    
-    
+class profiles:
+
+    profiles_list = []
+
     @classmethod
-    def confirm_persona(cls,username,password):
-        active_user
+    def confirm_persona(cls, username, password):
+
+        active_persona = ''
+        for persona in personas.personas_list:
+            if(persona.username == username and persona.password == password):
+                active_persona == persona.username
+        return active_persona
+
+    def __init__(self, app, username, password):
+        self.app = app
+        self.username = username
+        self.password = password
+
+    def save_profile(self):
+
+        profiles.profiles_list.append(self)
+
+    def delete_profile(self):
+
+        profiles.profiles_list.remove(self)
