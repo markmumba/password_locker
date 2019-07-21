@@ -164,8 +164,14 @@ def main():
             else:
                 print("That profile does not exist")
         elif short_code == 'gp':
-                    	password = gen_password()
-        
-        elif         
-                 
-                 
+            password = gen_password()
+
+        elif short_code == 'ex':
+            print("Happy Coding See You Dear")
+            break
+        else:
+            print("Invalid response kindly refer to the Menu above")
+
+
+if __name__ == '__main__':
+    main()
