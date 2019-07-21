@@ -167,7 +167,7 @@ def main():
             password = gen_password()
 
         elif short_code == 'ex':
-            print("Happy Coding See You Dear")
+            print("Happy Coding See You Later and try listening to podcasts mostly bill burr")
             break
         else:
             print("Invalid response kindly refer to the Menu above")
