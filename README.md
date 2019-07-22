@@ -1,5 +1,9 @@
  # Password locker
+
+![lock](image/01df69a99c.svg)
+
  Password Locker is a python CLI (command line interface) application that manages login credentials for various accounts that require passwords i.e. usernames and passwords. Store-Passwords also generates randomn fully-encrypted alphanumeric mixed with special characters password(s) that the user can copy and paste into their accounts upon signup.
+ Hope you enjoy it .
 
   By Markian Mumba
 
@@ -36,7 +40,7 @@ To ge this program you need to fork it then clone it to your local storage
 * To run the application, in your terminal:
 
         $ chmod +x app.py
-        $ ./app.py
+        $ ./main.py
         
 ## Testing the Application
 * To run the tests for the class file:
@@ -45,6 +49,11 @@ To ge this program you need to fork it then clone it to your local storage
 
 ## Technologies Used
 * Python3.8
+
+## Contacts
+
+Emailmarkmumba01@gmail.com <br>
+instagram - m.u.m.b.a_
 
 ## License
 MIT &copy;2019 [Markian Mumba](https://github.com/markmumba/)
