@@ -116,13 +116,13 @@ def main():
                     save_profile(create_profile(app_name, username, password))
                     print('\n')
                     print(
-                        f"New Credential : {app_name} UserName: {username}  created")
+                        f"New Profile : {app_name} UserName: {username}  created")
                     print('\n')
 
         elif short_code == 'dc':
             if display_profile():
                 print(
-                    "Your Account(s) Credential(S) are as follows :")
+                    "Your Account(s) Profile(S) are as follows :")
                 print('\n')
                 for password_locker in display_profile():
                     print(
@@ -132,7 +132,7 @@ def main():
             else:
                 print('\n')
                 print(
-                    "Oops !!! You dont seem to have any Credentials saved yet")
+                    "Oops !!! You dont seem to have any Profile saved yet")
                 print('\n')
 
         elif short_code == 'fc':
